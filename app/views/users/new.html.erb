@@ -11,13 +11,16 @@
           <div class="form-group">
             <%= f.label :name, "이름" %>
             <%= f.text_field :name, class: "form-control", required: true %>
-
+          </div>
+          <div class="form-group">
             <%= f.label :email, "이메일" %>
             <%= f.email_field :email, class: "form-control", required: true %>
-
+          </div>
+          <div class="form-group">
             <%= f.label :password, "비밀번호" %>
             <%= f.password_field :password, class: "form-control", required: true %>
-
+          </div>
+          <div class="form-group">
             <%= f.label :password_confirmation, "비밀번호 확인" %>
             <%= f.password_field :password_confirmation, class: "form-control", required: true %>
           </div>
