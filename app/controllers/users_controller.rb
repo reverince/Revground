@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
-  before_action :correct_user,   only: [:edit, :update]
-  before_action :admin_user, only: [:destroy]
+  before_action :correct_user, only: [:edit, :update]
+  before_action :correct_or_admin_user, only: [:destroy]
 
   def index
     @users = User.paginate(page: params[:page])
@@ -39,9 +39,11 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
-    flash[:success] = "유저를 삭제했습니다"
-    redirect_to users_url
+    @user = User.find(params[:id])
+    log_out if current_user?(@user)
+    @user.destroy!
+    flash[:success] = "계정을 삭제했습니다"
+    redirect_to root_url
   end
 
   private
@@ -65,6 +67,11 @@ class UsersController < ApplicationController
 
   def admin_user
     redirect_to(root_url) unless current_user.admin?
+  end
+
+  def correct_or_admin_user
+    @user = User.find(params[:id])
+    redirect_to(root_url) unless current_user?(@user) || current_user.admin?
   end
 
 end

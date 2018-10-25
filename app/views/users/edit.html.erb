@@ -9,28 +9,36 @@
           <%= render 'shared/error_messages' %>
           <div class="form-group">
             <%= f.label :name, "이름" %>
-            <%= f.text_field :name, class: 'form-control' %>
+            <%= f.text_field :name, class: "form-control" %>
           </div>
           <div class="form-group">
             <%= f.label :email, "이메일" %>
-            <%= f.email_field :email, class: 'form-control' %>
+            <%= f.email_field :email, class: "form-control" %>
           </div>
           <div class="form-group">
             <%= f.label :password, "비밀번호" %>
-            <%= f.password_field :password, class: 'form-control' %>
+            <%= f.password_field :password, class: "form-control" %>
           </div>
           <div class="form-group">
             <%= f.label :password_confirmation, "비밀번호 확인" %>
-            <%= f.password_field :password_confirmation, class: 'form-control' %>
+            <%= f.password_field :password_confirmation, class: "form-control" %>
           </div>
           <%= f.submit "저장", class: "btn btn-primary" %>
         <% end %>
       </div>
     </div>
-
-    <div class="gravatar_edit">
-      <%= gravatar_for @user %>
-      <%= link_to "변경", "http://gravatar.com/emails", target: "_blank", rel: "noopener", class: "btn btn-md btn-primary btn-outline" %>
+  </div>
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= gravatar_for @user %>
+        <%= link_to "변경", "http://gravatar.com/emails", target: "_blank", rel: "noopener", class: "btn btn-md btn-primary btn-outline" %>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-body right">
+        <%= link_to "계정 삭제", @user, method: "delete", data: { confirm: "정말로 삭제할까요?" }, class: "btn btn-md btn-danger btn-outline" %>
+      </div>
     </div>
   </div>
 </div>

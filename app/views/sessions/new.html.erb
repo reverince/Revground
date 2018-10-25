@@ -12,6 +12,7 @@
           </div>
           <div class="form-group">
             <%= f.label :password, "비밀번호" %>
+            <%= link_to "비밀번호 찾기", new_password_reset_path, class: "btn btn-xs btn-info btn-outline" %>
             <%= f.password_field :password, class: "form-control", required: true %>
           </div>
           <div class="checkbox">
