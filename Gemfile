@@ -5,6 +5,7 @@ ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
+
 # 부트스트랩
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
@@ -15,6 +16,9 @@ gem 'faker', '~> 1.9.1'
 # 페이지
 gem 'will_paginate', '~> 3.1.6'
 gem 'bootstrap-will_paginate', '~> 1.0.0'
+# 테스트
+gem 'rails-controller-testing', '~> 1.0.2'
+
 # Use sqlite3 as the database for Active Record
 group :development do
   gem 'sqlite3'
