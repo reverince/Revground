@@ -1,0 +1,14 @@
+<% provide(:title, "유저 목록") %>
+<h1><%= yield(:title) %></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="center">
+      <%= will_paginate %>
+    </div>
+    <%= render @users %>
+    <div class="center">
+      <%= will_paginate %>
+    </div>
+  </div>
+</div>

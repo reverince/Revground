@@ -10,6 +10,11 @@ gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 # 비밀번호
 gem 'bcrypt', '~> 3.1.12'
+# 가짜 데이터
+gem 'faker', '~> 1.9.1'
+# 페이지
+gem 'will_paginate', '~> 3.1.6'
+gem 'bootstrap-will_paginate', '~> 1.0.0'
 # Use sqlite3 as the database for Active Record
 group :development do
   gem 'sqlite3'

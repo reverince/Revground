@@ -17,10 +17,13 @@ textarea {
   resize: vertical;
 }
 
+.middle {
+  display: inline-block;
+  vertical-align: middle;
+}
 .center {
   text-align: center;
 }
-
 .right {
   text-align: right;
 }
@@ -94,17 +97,8 @@ aside {
       border: 0;
       padding-top: 0;
     }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
     h1 {
-      font-size: 1.4em;
       text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
     }
   }
 }
@@ -129,30 +123,51 @@ aside {
 
 /* Bootstrap */
 
+$color-primary: #428bca;
+$color-success: #5cb85c;
+$color-info: #5bc0de;
+$color-warning: #f0ad4e;
+$color-danger: #d9534f;
+
 .btn-outline {
-    background-color: transparent;
-    color: inherit;
-    transition: all .5s;
+  background-color: transparent;
+  color: inherit;
+  transition: all .5s;
 }
 
 .btn-primary.btn-outline {
-    color: #428bca;
+  color: $color-primary;
+  &:hover {
+    background-color: $color-primary;
+  }
 }
 
 .btn-success.btn-outline {
-    color: #5cb85c;
+  color: $color-success;
+  &:hover {
+    background-color: $color-success;
+  }
 }
 
 .btn-info.btn-outline {
-    color: #5bc0de;
+  color: $color-info;
+  &:hover {
+    background-color: $color-info;
+  }
 }
 
 .btn-warning.btn-outline {
-    color: #f0ad4e;
+  color: $color-warning;
+  &:hover {
+    background-color: $color-warning;
+  }
 }
 
 .btn-danger.btn-outline {
-    color: #d9534f;
+  color: $color-danger;
+  &:hover {
+    background-color: $color-danger;
+  }
 }
 
 .btn-primary.btn-outline:hover,
@@ -160,6 +175,5 @@ aside {
 .btn-info.btn-outline:hover,
 .btn-warning.btn-outline:hover,
 .btn-danger.btn-outline:hover {
-    color: #fff;
+  color: white;
 }
-
