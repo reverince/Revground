@@ -8,6 +8,8 @@ gem 'rails', '~> 5.2.1'
 # 부트스트랩
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+# 비밀번호
+gem 'bcrypt', '~> 3.1.12'
 # Use sqlite3 as the database for Active Record
 group :development do
   gem 'sqlite3'
