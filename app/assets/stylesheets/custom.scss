@@ -1,0 +1,85 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Gugi|Nanum+Gothic&subset=korean');
+
+/* universal */
+
+body {
+  font-family: "Nanum Gothic";
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Gugi";
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
+/* header */
+
+#logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.7em;
+  float: left;
+  margin-top: 9px;
+  margin-right: 10px;
+  &:hover {
+    color: silver;
+    text-decoration: none;
+  }
+}
+
+/* footer */
+
+footer {
+  color: gray;
+  margin-top: 50px;
+  padding-top: 5px;
+  border-top: 1px dashed gray;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
