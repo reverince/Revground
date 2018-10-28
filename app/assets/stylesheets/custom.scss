@@ -49,6 +49,10 @@ p {
   line-height: 1.6em;
 }
 
+.silver {
+  color: lightgray;
+}
+
 /* header */
 
 #logo {
@@ -176,4 +180,10 @@ $color-danger: #d9534f;
 .btn-warning.btn-outline:hover,
 .btn-danger.btn-outline:hover {
   color: white;
+}
+
+/* micropost */
+
+.micropost {
+  padding-bottom: 20px;
 }

@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%= link_to gravatar_for(current_user, size: 50), current_user %>
+    <h1><%= current_user.name %></h1>
+    <span>
+      <%= link_to "프로필", current_user, class: "btn btn-md btn-primary btn-outline" %>
+    </span>
+    <span>마이크로포스트 : <%= current_user.microposts.count %>개</span>
+  </div>
+</div>

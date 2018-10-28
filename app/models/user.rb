@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   attr_accessor :remember_token, :reset_token
+  has_many :microposts, dependent: :destroy
 
   EMAIL_REGEX = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   validates :name,  presence: true, uniqueness: true,

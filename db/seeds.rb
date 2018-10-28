@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Users
+
 User.create!(name:  "ADMIN",
              email: "a@test.com",
              password:              "1213",
@@ -22,4 +24,12 @@ User.create!(name:  "ADMIN",
                password_confirmation: password)
 end
 
-puts "seeds.rb 실행 완료"
+# Microposts
+
+users = User.order(:created_at).take(6)
+33.times do
+  content = Faker::Lorem.sentence(5)
+  users.each { |user| user.microposts.create!(content: content) }
+end
+
+puts "[INFO] seeds.rb complete"
