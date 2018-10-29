@@ -17,15 +17,16 @@
       </div>
     </section>
   </aside>
-  <div class="col-md-8">
-    <% if @user.microposts.any? %>
+  <% if @user.microposts.any? %>
+    <div class="col-md-8">
       <h3>
-        마이크로포스트<span class="badge"><%= @user.microposts.count %></span>
+        마이크로포스트
+        <span class="badge"><%= @user.microposts.count %></span>
       </h3>
       <ol class="list-group">
         <%= render @microposts %>
       </ol>
       <%= will_paginate @microposts %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>

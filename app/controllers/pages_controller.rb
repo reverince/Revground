@@ -1,7 +1,11 @@
 class PagesController < ApplicationController
 
   def home
-    @microposts = current_user.microposts.build if logged_in?
+    if logged_in?
+      @user = current_user
+      @microposts = @user.microposts.paginate(page: params[:page])
+      @micropost = current_user.microposts.build
+    end
   end
 
   def about

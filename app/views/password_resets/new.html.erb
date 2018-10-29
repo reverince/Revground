@@ -8,7 +8,7 @@
         <%= form_for(:password_reset, url: password_resets_path) do |f| %>
           <div class="form-group">
             <%= f.label :email, "이메일" %>
-            <%= f.email_field :email, class: 'form-control' %>
+            <%= f.email_field :email, class: 'form-control', required: true %>
           </div>
           <%= f.submit "확인", class: "btn btn-primary" %>
         <% end %>

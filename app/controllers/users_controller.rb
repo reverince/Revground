@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
+    @micropost = current_user.microposts.build
   end
 
   def new
@@ -51,14 +52,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
-  end
-
-  def logged_in_user
-    store_location
-    unless logged_in?
-      flash[:danger] = "계속하려면 로그인하세요"
-      redirect_to login_url
-    end
   end
 
   def correct_user
