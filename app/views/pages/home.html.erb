@@ -4,6 +4,12 @@
       <%= render "shared/user_info" %>
       <%= render "shared/micropost_form" %>
     </aside>
+    <div class="col-md-8">
+      <h3>
+        마이크로포스트 피드
+      </h3>
+      <%= render 'shared/micropost_feed' %>
+    </div>
   </div>
 <% else %>
   <div class="center jumbotron">

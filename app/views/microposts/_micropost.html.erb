@@ -3,9 +3,14 @@
   <span class="user">
     <%= link_to micropost.user.name, micropost.user %>
   </span>
-  <span class="silver">
+  <span class="gray">
     <%= time_ago_in_words(micropost.created_at) %> 전
   </span>
+  <% if current_user?(micropost.user) %>
+    <%= link_to "삭제", micropost,
+        method: :delete, data: { confirm: "정말 삭제할까요?" },
+        class: "btn btn-xs btn-danger btn-outline" %>
+  <% end %>
   <div class="content">
     <%= micropost.content %>
   </div>
