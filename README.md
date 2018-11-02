@@ -1,24 +1,13 @@
-# README
+# Revground
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails 및 Ruby 공부를 위한 사이트입니다.
 
-Things you may want to cover:
+## 참조
 
-* Ruby version
+[Ruby on Rails Tutorial](https://www.railstutorial.org/book) by Michael Hartl
 
-* System dependencies
+## 버전
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* 루비 2.5.1
+* 레일즈 5.2.X
+* 기타 `/Gemfile` 참조
