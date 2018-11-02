@@ -7,7 +7,7 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.1'
 
 # 국제화
-gem 'rails-i18n', '~> 5.1.1'
+gem 'rails-i18n', '~> 5.1.2'
 # 테스트
 gem 'rails-controller-testing', '~> 1.0.2'
 # 비밀번호
@@ -21,7 +21,7 @@ gem 'bootstrap-will_paginate', '~> 1.0.0'
 # 가짜 데이터
 gem 'faker', '~> 1.9.1'
 
-# Use sqlite3 as the database for Active Record
+# Use postgreSQL as the database for Active Record
 group :development do
   gem 'sqlite3'
 end

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UsersLoginTest < ActionDispatch::IntegrationTest
   def setup
-    @user = users(:fixture1)
+    @user = users(:one)
   end
 
   test "login with remembering" do

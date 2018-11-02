@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UsersEditTest < ActionDispatch::IntegrationTest
   def setup
-    @user = users(:fixture1)
+    @user = users(:one)
   end
 
   test "should redirect update when not logged in" do

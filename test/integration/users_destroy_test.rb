@@ -2,9 +2,9 @@ require 'test_helper'
 
 class UsersDestroyTest < ActionDispatch::IntegrationTest
   def setup
-    @admin = users(:fixture_admin)
-    @user = users(:fixture1)
-    @user2 = users(:fixture2)
+    @admin = users(:admin)
+    @user = users(:one)
+    @user2 = users(:two)
   end
 
   test "should redirect destroy when not logged in" do
