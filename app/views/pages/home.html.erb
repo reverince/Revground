@@ -1,14 +1,17 @@
 <% if logged_in? %>
   <div class="row">
     <aside class="col-md-4">
-      <%= render "shared/user_info" %>
-      <%= render "shared/micropost_form" %>
+      <section>
+        <%= render "shared/user_info" %>
+        <%= render "shared/stats" %>
+        <%= render "shared/micropost_form" %>
+      </section>
     </aside>
     <div class="col-md-8">
       <h3>
         마이크로포스트 피드
       </h3>
-      <%= render 'shared/micropost_feed' %>
+      <%= render "shared/micropost_feed" %>
     </div>
   </div>
 <% else %>
