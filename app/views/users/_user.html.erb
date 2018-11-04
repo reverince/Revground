@@ -6,7 +6,9 @@
       <span class="label label-warning">관리자</span>
     <% end %>
     <% if current_user.admin? && !current_user?(user) %>
-    <%= link_to "삭제", user, method: "delete", data: { confirm: "정말로 삭제할까요?" }, class: "btn btn-md btn-danger" %>
+    <%= link_to "삭제", user,
+        method: "delete", data: { confirm: "정말로 삭제할까요?" },
+        class: "btn btn-xs btn-danger btn-outline" %>
     <% end %>
   </div>
 </div>

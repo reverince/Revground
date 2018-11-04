@@ -1,5 +1,9 @@
 ---
 ko:
+  will_paginate:
+    previous_label: "&#8592; 이전"
+    next_label: "다음 &#8594;"
+    page_gap: "&hellip;"
   activerecord:
     errors:
       messages:
@@ -77,7 +81,7 @@ ko:
       half_a_minute: 30초
       less_than_x_minutes:
         one: 일 분 이하
-        other: "%{count}분 이하"
+        other: 방금
       less_than_x_seconds:
         one: 일 초 이하
         other: "%{count}초 이하"
