@@ -2,10 +2,10 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <a href="<%= following_user_path(@user) %>">
-      <b><%= @user.following.count %></b> 팔로잉
+      <b id="following"><%= @user.following.count %></b> 팔로잉
     </a>
     <a href="<%= followers_user_path(@user) %>">
-      <b><%= @user.followers.count %></b> 팔로워
+      <b id="followers"><%= @user.followers.count %></b> 팔로워
     </a>
   </div>
 </div>
