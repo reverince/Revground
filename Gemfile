@@ -14,7 +14,7 @@ gem 'rails-controller-testing', '~> 1.0.2'
 gem 'bcrypt', '~> 3.1.12'
 # 부트스트랩
 gem 'jquery-rails'
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'bootstrap-sass', '>= 3.4.1'
 # 페이지
 gem 'will_paginate', '~> 3.1.6'
 gem 'bootstrap-will_paginate', '~> 1.0.0'
